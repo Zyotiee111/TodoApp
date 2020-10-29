@@ -1,0 +1,50 @@
+.todo-login{
+    background-color: #3f3160;  
+    min-height: 400px;
+    width: 400px;
+    margin: 80px auto;
+    border-radius: 10px;
+  }
+
+.login-head{
+    color: white;
+    padding-top: 20px;
+}
+#login-form input{
+    background-color: cornflowerblue;
+    border: 0;
+    width: 200px;
+    height: 60px;
+    padding: 0px 20px;
+    margin: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    
+}
+#login-form input::placeholder{
+    color:black;
+}
+#login-form button{
+    height: 48px;
+    width: 150px;
+    border-radius: 7px;
+    border: 0;
+    background-color: yellowgreen;
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 15px;
+
+}
+.logout{
+    height: 48px;
+    width: 150px;
+    border-radius: 7px;
+    border: 0;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 15px;
+    
+
+}
