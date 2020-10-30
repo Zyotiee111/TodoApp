@@ -1,28 +1,40 @@
 import './App.css';
+import {useState} from 'react'
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
-import Todo from './components/todo.js';
-import Login from './components/login.js';
+
+// import Login from './components/login.js';
 import Logout from './components/logout.js';
+import ListItem from './components/ListItem.js'
+import Signin from './components/Signin.js'
 
 function App() {
-  // const [isLoggedIn, setLoggedIn] = useState(!1);
- 
+  const [isLoggedIn, setLoggedIn] = useState(!1);
+
   return (
-    <div className="App">
-     
+    <div className="todo-app">
+
       <Router>
         <Switch>
-          {/* <Route
-           exact
-           path="/"
-           render = {()=> {Login}  /> */}
-          <Route exact path={"/"} component ={Login}/>
-          <Route exact path={"/home"} component ={Todo}/>
-          <Route exact path={"/logout"} component ={Logout}/>
+          <Route
+            exact
+            path={"/"}
+            render={
+              () =>
+                isLoggedIn ?
+                  <Redirect to="/home" /> :
+                  <Signin setLoggedIn={setLoggedIn} />} />
+
+          <Route
+            exact
+            path={"/home"}
+            render={
+              () =>
+                isLoggedIn ?
+                  <ListItem setLoggedIn={setLoggedIn} /> :
+                  <Redirect to="/" />} />
         </Switch>
       </Router>
     </div>
-  );
-}
-
+  )
+ }
 export default App;

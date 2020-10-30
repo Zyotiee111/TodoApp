@@ -1,42 +1,122 @@
-.App {
-  text-align: center;
-  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #8d74c8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: #3f3160;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 30px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+
+  background-color: cornflowerblue;
+  border: 0;
+  width: 350px;
+  height: 60px;
+  padding: 0px 20px;
+  margin: 30px;
+  font-size: 18px;
+  border-radius: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input::placeholder {
+  color:black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-button {
+
+  height: 52px;
+  width: 95px;
+  border-radius: 7px;
+  border: 0;
+  background-color: yellowgreen;
+  font-weight: bolder;
+  font-size: 17px;
+  margin-top: 15px;
+  margin-right:8px;
 }
-.todo-header{
-  font-size: 36px;
+
+
+.todo-button.edit {
+  background: yellowgreen;
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color:black;
+  background: cornflowerblue;
+  padding: 16px;
+  border-radius: 7px;
+  width: 90%;
+  font-size: 20px;
+
+}
+
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: black;
+}
+
+
+.icons {
+  /* display: flex; */
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.delete-icon {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
 }
