@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   justify-content: start;
   width: 520px;
-  min-height: 600px;
+  min-height: 10px;
   background: #3f3160;
   text-align: center;
   margin: 128px auto;
@@ -24,9 +24,16 @@ body {
 }
 
 h1 {
-  margin: 32px 0;
+  margin: 15px ;
   color: #fff;
   font-size: 30px;
+}
+
+h3{
+  color: #fff;
+  margin-bottom: 7px;
+  
+  
 }
 
 .complete {
@@ -94,18 +101,8 @@ h1 {
 
 }
 
-
 .icons {
   display: flex;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
-  background-color: black;
-}
-
-
-.icons {
-  /* display: flex; */
   align-items: center;
   font-size: 24px;
   cursor: pointer;
@@ -117,6 +114,3 @@ h1 {
   color: #fff;
 }
 
-.edit-icon {
-  color: #fff;
-}

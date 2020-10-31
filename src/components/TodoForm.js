@@ -2,7 +2,6 @@ import React, {useState, useEffect, useRef} from 'react';
 
 export default function Todo(props) {
 
-    // setting input value
     const[value, setValue] = useState(props.edit ? props.edit.value :'');
 
     const valueRef = useRef(null)
@@ -11,7 +10,6 @@ export default function Todo(props) {
         valueRef.current.focus()
     })
 
-    //handle submitting of form
 
     const handleSubmit = (mouseCLick) =>{
         mouseCLick.preventDefault();
@@ -28,20 +26,6 @@ export default function Todo(props) {
         <div>
         <div className="todo">
              <form id = "to-do-form" onSubmit = {handleSubmit}>
-                {props.edit ? (
-                        <>
-                            <input
-                            type="text"
-                            className = 'todo-input edit'
-                            placeholder="Update Item"
-                            value = {value}
-                            onChange = {keyboardstroke => setValue(keyboardstroke.target.value)}
-                            ref = {valueRef}
-                          /> 
-                          <button type= "submit"  className = 'todo-button edit'> Update</button>
-                    </>
-                 ): (
-                        <>
                             <input
                             type="text"
                             placeholder="Add Todo"
@@ -52,12 +36,7 @@ export default function Todo(props) {
                             
                             /> 
                             <button type= "submit" className="todo-button"> Add</button>
-                        </>
-                    )
-                }
-            
-            
-             </form>
+           </form>
         
            
         </div>

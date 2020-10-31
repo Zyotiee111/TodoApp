@@ -1,16 +1,15 @@
 .todo-login{
     background-color: #3f3160;  
-    min-height: 50px;
-    width: 400px;
-    margin: 70px auto;
+    /* min-height: 5px; 
+     width: 400px;  */
+    margin: 0px auto;
     border-radius: 10px;
   }
 
 .login-head{
     color: white;
-    margin-top: auto;
-    margin-bottom: 50px;
-    font-size: 56px;
+    margin-bottom: 20px;
+    font-size: 36px;
 }
 #login-form input{
     background-color: cornflowerblue;
@@ -18,7 +17,7 @@
     width: 350px;
     height: 60px;
     padding: 0px 20px;
-    margin: 30px;
+    margin: 15px;
     font-size: 18px;
     border-radius: 10px;
     color: white;

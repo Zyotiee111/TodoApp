@@ -1,9 +1,6 @@
 import './App.css';
 import {useState} from 'react'
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
-
-// import Login from './components/login.js';
-import Logout from './components/logout.js';
 import ListItem from './components/ListItem.js'
 import Signin from './components/Signin.js'
 
@@ -33,6 +30,7 @@ function App() {
                   <ListItem setLoggedIn={setLoggedIn} /> :
                   <Redirect to="/" />} />
         </Switch>
+      
       </Router>
     </div>
   )
